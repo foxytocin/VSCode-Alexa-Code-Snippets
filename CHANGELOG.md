@@ -1,7 +1,11 @@
-# Change Log
+## Dez 15, 2019
+v1.0.2
+- Fixes some optical issues
 
-Erster Version für den VS-Code Marktplace
+## Dez 15, 2019
+v1.0.1
+- Adds git-repo to package.json
 
-## [Unreleased]
-
-- Initial release
+## Dez 15, 2019
+v1.0.0
+- First publication
