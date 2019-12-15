@@ -1,0 +1,85 @@
+{
+  "Mocha: Datei-Header": {
+    "prefix": "afaMocha_Header",
+    "body": [
+      "const assert = require(\"chai\").assert;",
+      "const va = require(\"virtual-alexa\");",
+      "const alexa = va.VirtualAlexa.Builder()",
+      "\t.handler(\"index.js\")",
+      "\t.interactionModelFile(\"../../models/de-DE.json\")",
+      "\t.locale(\"de-DE\")",
+      "\t.create();\n",
+      "$0"
+    ],
+    "description": "Mocha Tests Header"
+  },
+  "Mocha: TestGroup": {
+    "prefix": "afaMocha_TestGroup",
+    "body": [
+      "describe(\"${1:GroupName}\", function () {",
+      "\t$0",
+      "});"
+    ],
+    "description": "Mocha TestGroup"
+  },
+  "Mocha: Utter-Test für TestGroup": {
+    "prefix": "afaMocha_Utter-Test",
+    "body": [
+      "it(\"${1:TestName}\", async function () {",
+      "\tlet result = await alexa.utter(\"${2:UtteranceToSay}\");",
+      "\tassert.include(result.response.outputSpeech.ssml, \"${3:ExpectedResult}\");",
+      "});",
+      "$0"
+    ],
+    "description": "Mocha Utter-Test für TestGroup"
+  },
+  "Mocha: Intent-Test für TestGroup": {
+    "prefix": "afaMocha_Intent-Test",
+    "body": [
+      "it(\"${1:TestName}\", async function() {",
+      "\tlet result = await alexa",
+      "\t\t.request()",
+      "\t\t.intent(\"${2:IntentName}\")",
+      "\t\t.slot(\"${3:SlotName}\", \"${4:SlotValue}\", \"CONFIRMED\")",
+      "\t\t.dialogState(\"COMPLETED\")",
+      "\t\t.send();\n",
+      "\tassert.include(result.response.outputSpeech.ssml, \"${5:ExpectedResult}\");",
+      "});",
+      "$0"
+    ],
+    "description": "Mocha Intent-Test für TestGroup"
+  },
+  "Mocha: forEach-Intent-Test für TestGroup": {
+    "prefix": "afaMocha_forEach-Intent-Test",
+    "body": [
+      "${1:Array} = [value1, value2, value3];",
+      "$1.forEach(element => {",
+      "\tit(\"${2:TestName}\", async function() {",
+      "\t\tlet result = await alexa",
+      "\t\t\t.request()",
+      "\t\t\t.intent(\"${3:IntentName}\")",
+      "\t\t\t.slot(\"${4:SlotName}\", element, \"CONFIRMED\")",
+      "\t\t\t.dialogState(\"COMPLETED\")",
+      "\t\t\t.send();\n",
+      "\t\tassert.include(result.response.outputSpeech.ssml, `${5:ExpectedResult}`);",
+      "\t});",
+      "});",
+      "$0"
+    ],
+    "description": "Mocha forEach-Intent-Test für TestGroup"
+  },
+  "Mocha: afterEach für TestGroup": {
+    "prefix": "afaMocha_afterEach",
+    "body": [
+      "afterEach(() => {",
+      "\talexa",
+      "\t\t.request()",
+      "\t\t.intent(\"${2:IntentName}\")",
+      "\t\t.dialogState(\"NONE\")",
+      "\t\t.send();",
+      "});",
+      "$0"
+    ],
+    "description": "Mocha afterEach für TestGroup"
+  }
+}

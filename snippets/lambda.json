@@ -1,0 +1,166 @@
+{
+  "Create Handler": {
+    "prefix": "afaHandler_Standard",
+    "body": [
+      "const ${1:Intent}RequestHandler = {",
+      "\tcanHandle(handlerInput) {",
+      "\t\treturn handlerInput.requestEnvelope.request.type === \"IntentRequest\"",
+      "\t\t\t&& handlerInput.requestEnvelope.request.intent.name === \"${1}\";",
+      "\t},",
+      "\thandle(handlerInput) {",
+      "\t\treturn handlerInput.responseBuilder",
+      "\t\t\t.speak(${2:\"ReplaceThisText\"})",
+      "\t\t\t.reprompt(\"${3:ReplaceThisText}\")",
+      "\t\t\t.getResponse();",
+      "\t}",
+      "};"
+    ],
+    "description": "Standard Handler"
+  },
+  "Create Handler with SimpleCard": {
+    "prefix": "afaHandler_withSimpleCard",
+    "body": [
+      "const ${1:Intent}RequestHandler = {",
+      "\tcanHandle(handlerInput) {",
+      "\t\treturn handlerInput.requestEnvelope.request.type === \"IntentRequest\"",
+      "\t\t\t&& handlerInput.requestEnvelope.request.intent.name === \"${1}\";",
+      "\t},",
+      "\thandle(handlerInput) {",
+      "\t\treturn handlerInput.responseBuilder",
+      "\t\t\t.speak(${2:\"ReplaceThisText\"})",
+      "\t\t\t.reprompt(\"${3:ReplaceThisText}\")",
+      "\t\t\t.withSimpleCard(\"${1:ReplaceThisWithTitle}\", ${2:\"ReplaceThisWithMessage\"}) //is displayed on devices with display",
+      "\t\t\t.getResponse();",
+      "\t}",
+      "};"
+    ],
+    "description": "Handler with SimpleCard"
+  },
+  "Get DeviceId": {
+    "prefix": "afaVariableDeviceId",
+    "body": [
+      "deviceId = handlerInput.requestEnvelope.context.System.device.deviceId;"
+    ],
+    "description": "Creates a variable with devideId"
+  },
+  "Get AccessToken": {
+    "prefix": "afaVariableAccessToken",
+    "body": [
+      "accessToken = handlerInput.requestEnvelope.context.System.apiAccessToken;"
+    ],
+    "description": "Creates a variable with accessToken"
+  },
+  "Get SessionAttributes": {
+    "prefix": "afaVariableGetSessionAttributes",
+    "body": [
+      "sessionAttributes = handlerInput.attributesManager.getSessionAttributes();"
+    ],
+    "description": "Creates a variable with getSessionAttributes"
+  },
+  "Get SetSessionAttributes": {
+    "prefix": "afaVariableSetSessionAttributes",
+    "body": [
+      "handlerInput.attributesManager.setSessionAttributes(sessionAttributes);"
+    ],
+    "description": "Writes sessionAttributes with setSessionAttributes"
+  },
+  "Create ResponseBuilder Standard": {
+    "prefix": "afaHandlerResponseBuilder_Standard",
+    "body": [
+      "return handlerInput.responseBuilder",
+      "\t.speak(${1:\"ReplaceThisText\"})",
+      "\t.reprompt(\"${2:ReplaceThisText}\")",
+      "\t.withSimpleCard(\"${3:ReplaceThisWithTitle}\", ${1:\"ReplaceThisWithMessage\"})",
+      "\t.getResponse();"
+    ],
+    "description": "Creates a ResponseBuilder Standard"
+  },
+  "Create ResponseBuilder addDelegateDirective": {
+    "prefix": "afaHandlerResponseBuilder_addDelegateDirective",
+    "body": [
+      "const currentIntent = handlerInput.requestEnvelope.request.intent;",
+      "return handlerInput.responseBuilder",
+      "\t.addDelegateDirective(currentIntent)",
+      "\t.getResponse();"
+    ],
+    "description": "Creates a ResponseBuilder addDelegateDirective"
+  },
+  "Create ResponseBuilder addElicitSlotDirective": {
+    "prefix": "afaHandlerResponseBuilder_addElicitSlotDirective",
+    "body": [
+      "return handlerInput.responseBuilder",
+      "\t.speak(\"ReplaceWithTextToElicitSlot\")",
+      "\t.reprompt(\"ReplaceWithTextToElicitSlot\")",
+      "\t.addElicitSlotDirective('ReplaceWithSlotToElicit')",
+      "\t.getResponse();"
+    ],
+    "description": "Creates a ResponseBuilder addElicitSlotDirective"
+  },
+  "Function DontSupportsAPL": {
+    "prefix": "afaHandlerIfAPLIsNotSupported",
+    "body": [
+      "// if APL is not supported this response will be used",
+      "if (!supportsAPL(handlerInput)) {",
+      "\treturn handlerInput.responseBuilder",
+      "\t\t.speak(${1:\"ReplaceThisText\"})",
+      "\t\t.reprompt(\"${2:ReplaceThisText}\")",
+      "\t\t.withSimpleCard(\"${3:ReplaceThisWithTitle}\", ${1:\"ReplaceThisWithMessage\"})",
+      "\t\t.getResponse();",
+      "}"
+    ],
+    "description": "Creates an if-statement to test agains APL support"
+  },
+  "Create Handler for manuell Dialog Delegation": {
+    "prefix": "afaHandlersForManuellDialogDelegation",
+    "body": [
+      "const ${1:Intent}RequestHandler = {",
+      "\tcanHandle(handlerInput){",
+      "\t\tconst request = handlerInput.requestEnvelope.request;",
+      "\t\treturn request.type === \"IntentRequest\" &&",
+      "\t\t\trequest.intent.name === \"${1}\" &&",
+      "\t\t\trequest.dialogState === \"STARTED\";",
+      "\t},",
+      "\thandle(handlerInput){",
+      "\t\tconst currentIntent = handlerInput.requestEnvelope.request.intent;",
+      "\t\tlet ${2:fromCity} = currentIntent.slots.${2};",
+      "\t\t// ${2}.value is empty if the user has not filled the slot. In this example,",
+      "\t\t// the slot it filled with a default value of \"FillSlotWithDefaultValue\"",
+      "\t\tif (!${2}.value) {",
+      "\t\t\tcurrentIntent.slots.${2}.value = \"FillSlotWithDefaultValue\";",
+      "\t\t}",
+      "\t\t// Return the Dialog.Delegate directive",
+      "\t\treturn handlerInput.responseBuilder",
+      "\t\t\t.addDelegateDirective(currentIntent)",
+      "\t\t\t.getResponse();",
+      "\t}",
+      "};",
+      "const InProgress${1}RequestHandler = {",
+      "\tcanHandle(handlerInput) {",
+      "\t\tconst request = handlerInput.requestEnvelope.request;",
+      "\t\treturn request.type === \"IntentRequest\" &&",
+      "\t\t\trequest.intent.name === \"${1}\" &&",
+      "\t\t\trequest.dialogState === \"IN_PROGRESS\";",
+      "\t},",
+      "\thandle(handlerInput) {",
+      "\t\tconst currentIntent = handlerInput.requestEnvelope.request.intent;",
+      "\t\treturn handlerInput.responseBuilder",
+      "\t\t\t.addDelegateDirective(currentIntent)",
+      "\t\t\t.getResponse();",
+      "\t},",
+      "};",
+      "const Completed${1}RequestHandler = {",
+      "\tcanHandle(handlerInput) {",
+      "\t\tconst request = handlerInput.requestEnvelope.request;",
+      "\t\treturn request.type === \"IntentRequest\" &&",
+      "\t\t\trequest.intent.name === \"${1}\" &&",
+      "\t\t\trequest.dialogState === \"COMPLETED\";",
+      "\t},",
+      "\thandle(handlerInput) {",
+      "\t\t// All required slots are filled when this intent is triggered,",
+      "\t\t// so assemble the data into a response about the trip...",
+      "\t},",
+      "};$0"
+    ],
+    "description": "Create Handler for manuell Dialog Delegation"
+  }
+}

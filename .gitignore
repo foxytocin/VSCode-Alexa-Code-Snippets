@@ -1,0 +1,9 @@
+out
+node_modules
+.vscode-test/
+*.vsix
+npm-debug.log
+.idea/
+package-lock.json
+.nyc_output
+*.DS_Store

@@ -1,0 +1,79 @@
+{
+  "APL Commands AutoPage": {
+    "prefix": "afaAPLCommandsAutoPage",
+    "body": [
+      "{",
+      "\ttype: \"AutoPage\",",
+      "\tcomponentId: \"ReplaceWithTargetElementIdWithinTemplate\",",
+      "\tdelay: 1000,",
+      "\tduration: 4000",
+      "}$0"
+    ],
+    "description": "Creates AutoPage Command for APL ExecuteCommands"
+  },
+  "APL Commands SetPage": {
+    "prefix": "afaAPLCommandsSetPage",
+    "body": [
+      "{",
+      "\ttype: \"SetPage\",",
+      "\tcomponentId: \"ReplaceWithTargetElementIdWithinTemplate\",",
+      "\tdelay: 1000,",
+      "\tvalue: \"1\"",
+      "}$0"
+    ],
+    "description": "Creates SetPage Command for APL ExecuteCommands"
+  },
+  "APL Commands ParallelSequential": {
+    "prefix": "afaAPLCommandsParallelOrSequential",
+    "body": [
+      "{",
+      "\ttype: \"${1|Parallel,Sequential|}\",",
+      "\tcommands: []",
+      "}$0"
+    ],
+    "description": "Creates Parallel or Sequential Commands for APL ExecuteCommands"
+  },
+  "APL Commands SpeakItem": {
+    "prefix": "afaAPLCommandsSpeakItem",
+    "body": [
+      "{",
+      "\ttype: \"SpeakItem\",",
+      "\tcomponentId: \"ReplaceWithTargetElementIdWithinTemplate\",",
+      "\thighlightMode: \"line\",",
+      "\talign: \"center\"",
+      "}$0"
+    ],
+    "description": "Creates SpeakItem Command for APL ExecuteCommands"
+  },
+  "APL Commands AnimateItem": {
+    "prefix": "afaAPLCommandsAnimateItem",
+    "body": [
+      "{",
+      "\ttype: \"AnimateItem\",",
+      "\teasing: \"${1|ease-in-out,ease-out,ease-in,ease,linear5|}\",",
+      "\tduration: 1500,",
+      "\tcomponentId: \"ReplaceWithTargetElementIdWithinTemplate\",",
+      "\tvalue: [",
+      "\t\t{",
+      "\t\t\tproperty: \"opacity\",",
+      "\t\t\tto: 1",
+      "\t\t},",
+      "\t\t{",
+      "\t\t\tproperty: \"transform\",",
+      "\t\t\tfrom: [",
+      "\t\t\t\t{",
+      "\t\t\t\t\ttranslateX: 200",
+      "\t\t\t\t}",
+      "\t\t\t],",
+      "\t\t\tto: [",
+      "\t\t\t\t{",
+      "\t\t\t\t\ttranslateX: 0",
+      "\t\t\t\t}",
+      "\t\t\t]",
+      "\t\t}",
+      "\t]",
+      "}$0"
+    ],
+    "description": "Creates AnimateItem Command for APL ExecuteCommands"
+  }
+}

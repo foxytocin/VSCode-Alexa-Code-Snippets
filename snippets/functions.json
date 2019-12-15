@@ -1,0 +1,110 @@
+{
+  "Function SupportsDisplay": {
+    "prefix": "afaFunctionSupportsDisplay",
+    "body": [
+      "function supportsDisplay(handlerInput) {",
+      "\tconst hasDisplay =",
+      "\t\thandlerInput.requestEnvelope.context &&",
+      "\t\thandlerInput.requestEnvelope.context.System &&",
+      "\t\thandlerInput.requestEnvelope.context.System.device &&",
+      "\t\thandlerInput.requestEnvelope.context.System.device.supportedInterfaces &&",
+      "\t\thandlerInput.requestEnvelope.context.System.device.supportedInterfaces.Display;",
+      "\treturn hasDisplay;",
+      "}"
+    ],
+    "description": "Function SupportsDisplay"
+  },
+  "Function SupportsAPL": {
+    "prefix": "afaFunctionSupportsAPL",
+    "body": [
+      "function supportsAPL(handlerInput) {",
+      "\tconst supportedInterfaces = handlerInput.requestEnvelope.context.System.device.supportedInterfaces;",
+      "\tconst aplInterface = supportedInterfaces[\"Alexa.Presentation.APL\"];",
+      "\treturn aplInterface !== null && aplInterface !== undefined;",
+      "}"
+    ],
+    "description": "Function SupportsAPL"
+  },
+  "Function getResolvedValue": {
+    "prefix": "afaFunctionGetResolvedValue",
+    "body": [
+      "function getResolvedValue(requestEnvelope, slotName) {",
+      "\tif(requestEnvelope &&",
+      "\t\t\trequestEnvelope.request &&",
+      "\t\t\trequestEnvelope.request.intent &&",
+      "\t\t\trequestEnvelope.request.intent.slots &&",
+      "\t\t\trequestEnvelope.request.intent.slots[slotName] &&",
+      "\t\t\trequestEnvelope.request.intent.slots[slotName].resolutions &&",
+      "\t\t\trequestEnvelope.request.intent.slots[slotName].resolutions.resolutionsPerAuthority &&",
+      "\t\t\trequestEnvelope.request.intent.slots[slotName].resolutions.resolutionsPerAuthority[0] &&",
+      "\t\t\trequestEnvelope.request.intent.slots[slotName].resolutions.resolutionsPerAuthority[0].values &&",
+      "\t\t\trequestEnvelope.request.intent.slots[slotName].resolutions.resolutionsPerAuthority[0].values[0] &&",
+      "\t\t\trequestEnvelope.request.intent.slots[slotName].resolutions.resolutionsPerAuthority[0].values[0].value &&",
+      "\t\t\trequestEnvelope.request.intent.slots[slotName].resolutions.resolutionsPerAuthority[0].values[0].value.name) {",
+      "\t\treturn requestEnvelope.request.intent.slots[slotName].resolutions.resolutionsPerAuthority[0].values[0].value.name;",
+      "\t}",
+      "\treturn undefined;",
+      "}"
+    ],
+    "description": "Function getResolvedValue"
+  },
+  "Function getSpokenValue": {
+    "prefix": "afaFunctionGetSpokenValue",
+    "body": [
+      "function getSpokenValue(requestEnvelope, slotName) {",
+      "\tif(requestEnvelope &&",
+      "\t\t\trequestEnvelope.request &&",
+      "\t\t\trequestEnvelope.request.intent &&",
+      "\t\t\trequestEnvelope.request.intent.slots &&",
+      "\t\t\trequestEnvelope.request.intent.slots[slotName] &&",
+      "\t\t\trequestEnvelope.request.intent.slots[slotName].value) {",
+      "\t\treturn requestEnvelope.request.intent.slots[slotName].value;",
+      "\t}",
+      "\treturn undefined;",
+      "}"
+    ],
+    "description": "Function getSpokenValue"
+  },
+  "Function httpRequest": {
+    "prefix": "afaFunctionHttpRequest",
+    "body": [
+      "const http = require(\"http\");\n",
+      "function httpGet(options) {",
+      "\treturn new Promise((resolve, reject) => {",
+      "\t\tconst request = http.request(options, response => {",
+      "\t\t\tresponse.setEncoding(\"utf8\");",
+      "\t\t\tlet returnData = \"\";",
+      "\t\t\tif(response.statusCode < 200 || response.statusCode >= 300) {",
+      "\t\t\t\treturn reject(new Error(`${response.statusCode}: ${response.req.getHeader(\"host\")} ${response.req.path}`));",
+      "\t\t\t}",
+      "\t\t\tresponse.on(\"data\", chunk => {returnData += chunk;});",
+      "\t\t\tresponse.on(\"end\", () => {resolve(JSON.parse(returnData));});",
+      "\t\t\tresponse.on(\"error\", error => {reject(error);});",
+      "\t\t});",
+      "\t\trequest.on(\"error\", function (error) {reject(error);});",
+      "\t\trequest.end();",
+      "\t});",
+      "}\n",
+      "function buildHttpOptions(host, path) {",
+      "\tconst options = {",
+      "\t\thost: host,",
+      "\t\tport: 80,",
+      "\t\tpath: path,",
+      "\t\tmethod: \"GET\"",
+      "\t};",
+      "\treturn options;",
+      "}"
+    ],
+    "description": "Function httpRequest"
+  },
+  "Function getRandomPhraseFromArray": {
+    "prefix": "afaFunctionGetRandomPhraseFromArray",
+    "body": [
+      "function getRandomPhraseFromArray(array) {",
+      "\tconst i = Math.floor(Math.random() * array.length);",
+      "\treturn array[i];",
+      "}"
+    ],
+    "description": "returns a random element from an array"
+  }
+}
