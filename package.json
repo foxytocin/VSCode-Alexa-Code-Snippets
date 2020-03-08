@@ -2,7 +2,7 @@
 	"name": "alexa-code-snippets",
 	"displayName": "Alexa Code Snippets",
 	"description": "Snippets for Interaction Model, Lambda Handler and Helper Functions",
-	"version": "1.0.3",
+	"version": "1.0.4",
 	"publisher": "anfuchs",
 	"engines": {
 		"vscode": "^1.36.0"
@@ -28,10 +28,13 @@
 		"Alexa Interaction Model",
 		"Alexa Lambda Handler",
 		"Alexa Helper Functions",
+		"Alexa Response Builder",
 		"Alexa APL",
+		"Alexa Presentation Language",
 		"Mocha Snippets",
 		"AFA-CLI",
-		"AFA-Tool-Set"
+		"AFA-Tool-Set",
+		"AFA"
 	],
 	"contributes": {
 		"snippets": [
