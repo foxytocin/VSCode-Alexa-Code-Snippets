@@ -1,4 +1,8 @@
 ## Mar 09, 2020
+v1.0.5
+- corrects some typos
+
+## Mar 09, 2020
 v1.0.4
 - some kind of tutorial
 - fixes previous changelog entry

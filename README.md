@@ -9,7 +9,7 @@ Furthermore snippets for AFA-Tool-Set for example the AFA-CLI (Andreas Fuchs Com
 
 ## Tutorial
 
-This extension ships a bunch of useful code snippets for the JavaScript and JSON files
+This extension ships a bunch of useful code snippets for JavaScript and JSON files
 - Create a new file and save it
 - Start typing 'afa' within the editor window
 - A list with all available commands for your specified file format will pop up
