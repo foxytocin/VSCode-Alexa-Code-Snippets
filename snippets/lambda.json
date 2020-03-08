@@ -37,35 +37,35 @@
     "description": "Handler with SimpleCard"
   },
   "Get DeviceId": {
-    "prefix": "afaVariableDeviceId",
+    "prefix": "afaVariable_DeviceId",
     "body": [
       "deviceId = handlerInput.requestEnvelope.context.System.device.deviceId;"
     ],
     "description": "Variable with devideId"
   },
   "Get AccessToken": {
-    "prefix": "afaVariableAccessToken",
+    "prefix": "afaVariable_AccessToken",
     "body": [
       "accessToken = handlerInput.requestEnvelope.context.System.apiAccessToken;"
     ],
     "description": "Variable with accessToken"
   },
   "Get SessionAttributes": {
-    "prefix": "afaVariableGetSessionAttributes",
+    "prefix": "afaVariable_GetSessionAttributes",
     "body": [
       "sessionAttributes = handlerInput.attributesManager.getSessionAttributes();"
     ],
     "description": "Variable with getSessionAttributes"
   },
   "Get SetSessionAttributes": {
-    "prefix": "afaVariableSetSessionAttributes",
+    "prefix": "afaVariable_SetSessionAttributes",
     "body": [
       "handlerInput.attributesManager.setSessionAttributes(sessionAttributes);"
     ],
     "description": "Writes sessionAttributes with setSessionAttributes"
   },
   "Create ResponseBuilder Standard": {
-    "prefix": "afaHandlerResponseBuilder_Standard",
+    "prefix": "afaHandler_ResponseBuilder_Standard",
     "body": [
       "return handlerInput.responseBuilder",
       "\t.speak(${1:\"ReplaceThisText\"})",
@@ -76,7 +76,7 @@
     "description": "ResponseBuilder Standard"
   },
   "Create ResponseBuilder addDelegateDirective": {
-    "prefix": "afaHandlerResponseBuilder_addDelegateDirective",
+    "prefix": "afaHandler_ResponseBuilder_addDelegateDirective",
     "body": [
       "const currentIntent = handlerInput.requestEnvelope.request.intent;",
       "return handlerInput.responseBuilder",
@@ -86,7 +86,7 @@
     "description": "ResponseBuilder addDelegateDirective"
   },
   "Create ResponseBuilder addElicitSlotDirective": {
-    "prefix": "afaHandlerResponseBuilder_addElicitSlotDirective",
+    "prefix": "afaHandler_ResponseBuilder_addElicitSlotDirective",
     "body": [
       "return handlerInput.responseBuilder",
       "\t.speak(\"ReplaceWithTextToElicitSlot\")",
@@ -97,7 +97,7 @@
     "description": "ResponseBuilder addElicitSlotDirective"
   },
   "Function DontSupportsAPL": {
-    "prefix": "afaHandlerIfAPLIsNotSupported",
+    "prefix": "afaHandler_IfAPLIsNotSupported",
     "body": [
       "// if APL is not supported this response will be used",
       "if (!supportsAPL(handlerInput)) {",
@@ -111,7 +111,7 @@
     "description": "Creates an if-statement to test agains APL support"
   },
   "Create Handler for manuell Dialog Delegation": {
-    "prefix": "afaHandlersFormanuallyDialogDelegation",
+    "prefix": "afaHandlers_ForManuallyDialogDelegation",
     "body": [
       "const ${1:Intent}RequestHandler = {",
       "\tcanHandle(handlerInput){",
@@ -161,6 +161,6 @@
       "\t},",
       "};$0"
     ],
-    "description": "Create Handler for manually Dialog Delegation"
+    "description": "Create Handler for Manually Dialog Delegation"
   }
 }

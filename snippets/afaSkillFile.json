@@ -1,6 +1,6 @@
 {
   "AFA Main": {
-    "prefix": "afa_SkillFile_00_Main",
+    "prefix": "afaCLI_SF_00_Main",
     "body": [
       "{",
       "\t\"skillName\": \"${1:SKILL_NAME}\",",
@@ -47,10 +47,10 @@
       "\t]",
       "}"
     ],
-    "description": "Creates afaSkillFile Main"
+    "description": "Creates the Main for an afaSkillFile"
   },
   "AFA Intent": {
-    "prefix": "afa_SkillFile_01_Intent",
+    "prefix": "afaCLI_SF_01_Intent",
     "body": [
       "{",
       "\t\"intentName\": \"${1:INTENT_NAME_OHNE_SLOTS}\",",
@@ -65,10 +65,10 @@
       "\t]",
       "},"
     ],
-    "description": "Creates afaSkillFile Intent"
+    "description": "Creates an Intent for afaSkillFile"
   },
-  "AFA Intent mit Slot": {
-    "prefix": "afa_SkillFile_02_IntentMitSlot",
+  "AFA Intent with Slot": {
+    "prefix": "afaCLI_SF_02_IntentWithSlot",
     "body": [
       "{",
       "\t\"intentName\": \"${1:INTENT_NAME_MIT_SLOTS}\",",
@@ -121,10 +121,10 @@
       "\t}",
       "}$0"
     ],
-    "description": "Creates afaSkillFile Intent mit Slot"
+    "description": "Creates an Intent with Slots for afaSkillFile"
   },
-  "AFA Intent Value für Intent mit Custom-Slot": {
-    "prefix": "afa_SkillFile_03_Value_für_Intent_mit_Custom-Slot",
+  "AFA Value for Intent with CustomSlot": {
+    "prefix": "afaCLI_SF_03_ValueForIntentWithCustomSlot",
     "body": [
       "{",
       "\t\"value\": \"${1:WERT DER INNERHALB DES SLOTS ERKANNT WERDEN SOLL}\",",
@@ -135,6 +135,6 @@
       "\t]",
       "}$0"
     ],
-    "description": "Creates afaSkillFile Value für Intent mit Custom-Slot"
+    "description": "Creates a new Value for Intent with CustomSlot"
   }
 }

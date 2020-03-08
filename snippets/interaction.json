@@ -1,6 +1,6 @@
 {
     "Interaction Main": {
-        "prefix": "afa_01_ModelMain",
+        "prefix": "afaCLI_IM_01_Main",
         "body": [
             "{",
             "\"interactionModel\": {",
@@ -36,7 +36,7 @@
         "description": "Interaction Main"
     },
     "Intent with Utterances": {
-        "prefix": "afa_02_ModelIntent",
+        "prefix": "afaCLI_IM_02_Intent",
         "body": [
             "{",
             "\t\"name\": \"${1:ReplaceWithIntentName}\",",
@@ -51,7 +51,7 @@
         "description": "Intent with Utterances"
     },
     "Intent with Utterances and Standard-Slots": {
-        "prefix": "afa_03_ModelIntent_StandardSlots",
+        "prefix": "afaCLI_IM_03_Intent_StandardSlots",
         "body": [
             "{",
             "\t\"name\": \"${1:ReplaceWithIntentNameStandard}\",",
@@ -71,7 +71,7 @@
         "description": "Intent with Utterances and StandardSlots"
     },
     "Intent with Utterances and Custom-Slots": {
-        "prefix": "afa_04_ModelIntent_CustomSlots",
+        "prefix": "afaCLI_IM_04_Intent_CustomSlots",
         "body": [
             "{",
             "\t\"name\": \"${1:ReplaceWithIntentNameCustom}\",",
@@ -94,7 +94,7 @@
         "description": "Intent with Utterances and CustomSlots"
     },
     "Custom Slots for Types[]": {
-        "prefix": "afa_05_ModelCustomSlotsTypes",
+        "prefix": "afaCLI_IM_05_CustomSlotsTypes",
         "body": [
             "{",
             "\t\"name\": \"${1:ReplaceWithIntentNameCustom_SlotNameOne}\",",
@@ -130,7 +130,7 @@
         "description": "Custom Slots for Types[]"
     },
     "New Slot for CustomSlot Values[]": {
-        "prefix": "afa_06_ModelNewSlotForCustomSlotValuesInTypes",
+        "prefix": "afaCLI_IM_06_SlotForCustomSlotValuesInTypes",
         "body": [
             "{",
             "\t\"name\": {",
