@@ -110,8 +110,8 @@
     ],
     "description": "Creates an if-statement to test agains APL support"
   },
-  "Create Handler for manuell Dialog Delegation": {
-    "prefix": "afaHandlers_ForManuallyDialogDelegation",
+  "Create all Handlers for manuell Dialog Delegation": {
+    "prefix": "afaHandler_ForManuallyDialogDelegation",
     "body": [
       "const ${1:Intent}RequestHandler = {",
       "\tcanHandle(handlerInput){",
@@ -161,6 +161,6 @@
       "\t},",
       "};$0"
     ],
-    "description": "Create Handler for Manually Dialog Delegation"
+    "description": "Create all Handlers for Manually Dialog Delegation"
   }
 }
