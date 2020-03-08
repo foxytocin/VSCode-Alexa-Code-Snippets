@@ -68,7 +68,7 @@
             "\t]",
             "}$0"
         ],
-        "description": "Intent with Utterances and Standard-Slots"
+        "description": "Intent with Utterances and StandardSlots"
     },
     "Intent with Utterances and Custom-Slots": {
         "prefix": "afa_04_ModelIntent_CustomSlots",
@@ -91,7 +91,7 @@
             "\t]",
             "}$0"
         ],
-        "description": "Intent with Utterances and Custom-Slots"
+        "description": "Intent with Utterances and CustomSlots"
     },
     "Custom Slots for Types[]": {
         "prefix": "afa_05_ModelCustomSlotsTypes",

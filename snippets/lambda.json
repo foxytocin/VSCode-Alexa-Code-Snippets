@@ -41,21 +41,21 @@
     "body": [
       "deviceId = handlerInput.requestEnvelope.context.System.device.deviceId;"
     ],
-    "description": "Creates a variable with devideId"
+    "description": "Variable with devideId"
   },
   "Get AccessToken": {
     "prefix": "afaVariableAccessToken",
     "body": [
       "accessToken = handlerInput.requestEnvelope.context.System.apiAccessToken;"
     ],
-    "description": "Creates a variable with accessToken"
+    "description": "Variable with accessToken"
   },
   "Get SessionAttributes": {
     "prefix": "afaVariableGetSessionAttributes",
     "body": [
       "sessionAttributes = handlerInput.attributesManager.getSessionAttributes();"
     ],
-    "description": "Creates a variable with getSessionAttributes"
+    "description": "Variable with getSessionAttributes"
   },
   "Get SetSessionAttributes": {
     "prefix": "afaVariableSetSessionAttributes",
@@ -73,7 +73,7 @@
       "\t.withSimpleCard(\"${3:ReplaceThisWithTitle}\", ${1:\"ReplaceThisWithMessage\"})",
       "\t.getResponse();"
     ],
-    "description": "Creates a ResponseBuilder Standard"
+    "description": "ResponseBuilder Standard"
   },
   "Create ResponseBuilder addDelegateDirective": {
     "prefix": "afaHandlerResponseBuilder_addDelegateDirective",
@@ -83,7 +83,7 @@
       "\t.addDelegateDirective(currentIntent)",
       "\t.getResponse();"
     ],
-    "description": "Creates a ResponseBuilder addDelegateDirective"
+    "description": "ResponseBuilder addDelegateDirective"
   },
   "Create ResponseBuilder addElicitSlotDirective": {
     "prefix": "afaHandlerResponseBuilder_addElicitSlotDirective",
@@ -94,7 +94,7 @@
       "\t.addElicitSlotDirective('ReplaceWithSlotToElicit')",
       "\t.getResponse();"
     ],
-    "description": "Creates a ResponseBuilder addElicitSlotDirective"
+    "description": "ResponseBuilder addElicitSlotDirective"
   },
   "Function DontSupportsAPL": {
     "prefix": "afaHandlerIfAPLIsNotSupported",
@@ -111,7 +111,7 @@
     "description": "Creates an if-statement to test agains APL support"
   },
   "Create Handler for manuell Dialog Delegation": {
-    "prefix": "afaHandlersForManuellDialogDelegation",
+    "prefix": "afaHandlersFormanuallyDialogDelegation",
     "body": [
       "const ${1:Intent}RequestHandler = {",
       "\tcanHandle(handlerInput){",
@@ -161,6 +161,6 @@
       "\t},",
       "};$0"
     ],
-    "description": "Create Handler for manuell Dialog Delegation"
+    "description": "Create Handler for manually Dialog Delegation"
   }
 }

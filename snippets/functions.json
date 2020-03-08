@@ -1,6 +1,6 @@
 {
   "Function SupportsDisplay": {
-    "prefix": "afaFunctionSupportsDisplay",
+    "prefix": "afaFunction_SupportsDisplay",
     "body": [
       "function supportsDisplay(handlerInput) {",
       "\tconst hasDisplay =",
@@ -15,7 +15,7 @@
     "description": "Function SupportsDisplay"
   },
   "Function SupportsAPL": {
-    "prefix": "afaFunctionSupportsAPL",
+    "prefix": "afaFunction_SupportsAPL",
     "body": [
       "function supportsAPL(handlerInput) {",
       "\tconst supportedInterfaces = handlerInput.requestEnvelope.context.System.device.supportedInterfaces;",
@@ -26,7 +26,7 @@
     "description": "Function SupportsAPL"
   },
   "Function getResolvedValue": {
-    "prefix": "afaFunctionGetResolvedValue",
+    "prefix": "afaFunction_GetResolvedValue",
     "body": [
       "function getResolvedValue(requestEnvelope, slotName) {",
       "\tif(requestEnvelope &&",
@@ -49,7 +49,7 @@
     "description": "Function getResolvedValue"
   },
   "Function getSpokenValue": {
-    "prefix": "afaFunctionGetSpokenValue",
+    "prefix": "afaFunction_GetSpokenValue",
     "body": [
       "function getSpokenValue(requestEnvelope, slotName) {",
       "\tif(requestEnvelope &&",
@@ -66,7 +66,7 @@
     "description": "Function getSpokenValue"
   },
   "Function httpRequest": {
-    "prefix": "afaFunctionHttpRequest",
+    "prefix": "afaFunction_HttpRequest",
     "body": [
       "const http = require(\"http\");\n",
       "function httpGet(options) {",
@@ -98,7 +98,7 @@
     "description": "Function httpRequest"
   },
   "Function getRandomPhraseFromArray": {
-    "prefix": "afaFunctionGetRandomPhraseFromArray",
+    "prefix": "afaFunction_GetRandomPhraseFromArray",
     "body": [
       "function getRandomPhraseFromArray(array) {",
       "\tconst i = Math.floor(Math.random() * array.length);",

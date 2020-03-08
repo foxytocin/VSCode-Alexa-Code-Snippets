@@ -1,6 +1,6 @@
 {
   "APL .addDirective APL RenderDocument": {
-    "prefix": "afaAPLAddDirectiveRenderDocument",
+    "prefix": "afaAPL_AddDirective_RenderDocument",
     "body": [
       ".addDirective({",
       "\ttype: \"Alexa.Presentation.APL.RenderDocument\",",
@@ -18,7 +18,7 @@
     "description": "Creates .addDirective for APL RenderDocument"
   },
   "APL .addDirective RenderDocument with SSML Transformers": {
-    "prefix": "afaAPLAddDirectiveRenderDocumentWithSSMLTransformers",
+    "prefix": "afaAPL_AddDirective_RenderDocumentWithSSMLTransformers",
     "body": [
       ".addDirective({",
       "\ttype: \"Alexa.Presentation.APL.RenderDocument\",",
@@ -52,7 +52,7 @@
     "description": "Creates .addDirective for APL RenderDocument with SSML Transformers"
   },
   "APL .addDirective ExecuteCommands": {
-    "prefix": "afaAPLAddDirectiveExecuteCommands",
+    "prefix": "afaAPL_AddDirective_ExecuteCommands",
     "body": [
       ".addDirective({",
       "\ttype: \"Alexa.Presentation.APL.ExecuteCommands\",",
@@ -64,7 +64,7 @@
     "description": "Creates Directive for APL ExecuteCommands"
   },
   "APL .addDirective APL CompleteResponse": {
-    "prefix": "afaAPLAddDirectiveCompleteResponse",
+    "prefix": "afaAPL_AddDirective_CompleteResponse",
     "body": [
       ".addDirective({",
       "\ttype: \"Alexa.Presentation.APL.RenderDocument\",",
@@ -88,7 +88,7 @@
     "description": "Creates .addDirective for APL CompleteResponse"
   },
   "APL .addDirective APL CompleteResponse with SSML Transformers": {
-    "prefix": "afaAPLAddDirectiveCompleteResponseWithSSMLTransformers",
+    "prefix": "afaAPL_AddDirective_CompleteResponseWithSSMLTransformers",
     "body": [
       ".addDirective({",
       "\ttype: \"Alexa.Presentation.APL.RenderDocument\",",

@@ -1,6 +1,6 @@
 {
   "APL Commands AutoPage": {
-    "prefix": "afaAPLCommandsAutoPage",
+    "prefix": "afaAPL_Commands_AutoPage",
     "body": [
       "{",
       "\ttype: \"AutoPage\",",
@@ -12,7 +12,7 @@
     "description": "Creates AutoPage Command for APL ExecuteCommands"
   },
   "APL Commands SetPage": {
-    "prefix": "afaAPLCommandsSetPage",
+    "prefix": "afaAPL_Commands_SetPage",
     "body": [
       "{",
       "\ttype: \"SetPage\",",
@@ -24,7 +24,7 @@
     "description": "Creates SetPage Command for APL ExecuteCommands"
   },
   "APL Commands ParallelSequential": {
-    "prefix": "afaAPLCommandsParallelOrSequential",
+    "prefix": "afaAPL_Commands_ParallelOrSequential",
     "body": [
       "{",
       "\ttype: \"${1|Parallel,Sequential|}\",",
@@ -34,7 +34,7 @@
     "description": "Creates Parallel or Sequential Commands for APL ExecuteCommands"
   },
   "APL Commands SpeakItem": {
-    "prefix": "afaAPLCommandsSpeakItem",
+    "prefix": "afaAPL_Commands_SpeakItem",
     "body": [
       "{",
       "\ttype: \"SpeakItem\",",
@@ -46,7 +46,7 @@
     "description": "Creates SpeakItem Command for APL ExecuteCommands"
   },
   "APL Commands AnimateItem": {
-    "prefix": "afaAPLCommandsAnimateItem",
+    "prefix": "afaAPL_Commands_AnimateItem",
     "body": [
       "{",
       "\ttype: \"AnimateItem\",",

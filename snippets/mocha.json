@@ -22,7 +22,7 @@
     ],
     "description": "Mocha TestGroup"
   },
-  "Mocha: Utter-Test für TestGroup": {
+  "Mocha: Utter-Test for TestGroup": {
     "prefix": "afaMocha_Utter-Test",
     "body": [
       "it(\"${1:TestName}\", async function () {",
@@ -31,9 +31,9 @@
       "});",
       "$0"
     ],
-    "description": "Mocha Utter-Test für TestGroup"
+    "description": "Mocha Utter-Test for TestGroup"
   },
-  "Mocha: Intent-Test für TestGroup": {
+  "Mocha: Intent-Test for TestGroup": {
     "prefix": "afaMocha_Intent-Test",
     "body": [
       "it(\"${1:TestName}\", async function() {",
@@ -47,9 +47,9 @@
       "});",
       "$0"
     ],
-    "description": "Mocha Intent-Test für TestGroup"
+    "description": "Mocha Intent-Test for TestGroup"
   },
-  "Mocha: forEach-Intent-Test für TestGroup": {
+  "Mocha: forEach-Intent-Test for TestGroup": {
     "prefix": "afaMocha_forEach-Intent-Test",
     "body": [
       "${1:Array} = [value1, value2, value3];",
@@ -66,9 +66,9 @@
       "});",
       "$0"
     ],
-    "description": "Mocha forEach-Intent-Test für TestGroup"
+    "description": "Mocha forEach-Intent-Test for TestGroup"
   },
-  "Mocha: afterEach für TestGroup": {
+  "Mocha: afterEach for TestGroup": {
     "prefix": "afaMocha_afterEach",
     "body": [
       "afterEach(() => {",
@@ -80,6 +80,6 @@
       "});",
       "$0"
     ],
-    "description": "Mocha afterEach für TestGroup"
+    "description": "Mocha afterEach for TestGroup"
   }
 }
