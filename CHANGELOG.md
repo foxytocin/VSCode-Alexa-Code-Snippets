@@ -1,3 +1,7 @@
+## Jul 13, 2020
+v1.0.6
+- adds Slots for Intent with CustomSlots
+
 ## Mar 09, 2020
 v1.0.5
 - corrects some typos

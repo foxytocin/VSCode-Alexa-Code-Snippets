@@ -1,6 +1,6 @@
 {
   "AFA Main": {
-    "prefix": "afaCLI_SF_00_Main",
+    "prefix": "afaCLI_SF_01_Main",
     "body": [
       "{",
       "\t\"skillName\": \"${1:SKILL_NAME}\",",
@@ -50,7 +50,7 @@
     "description": "Creates the Main for an afaSkillFile"
   },
   "AFA Intent": {
-    "prefix": "afaCLI_SF_01_Intent",
+    "prefix": "afaCLI_SF_02_Intent",
     "body": [
       "{",
       "\t\"intentName\": \"${1:INTENT_NAME_OHNE_SLOTS}\",",
@@ -68,7 +68,7 @@
     "description": "Creates an Intent for afaSkillFile"
   },
   "AFA Intent with Slot": {
-    "prefix": "afaCLI_SF_02_IntentWithSlot",
+    "prefix": "afaCLI_SF_03_IntentWithSlot",
     "body": [
       "{",
       "\t\"intentName\": \"${1:INTENT_NAME_MIT_SLOTS}\",",
@@ -123,8 +123,38 @@
     ],
     "description": "Creates an Intent with Slots for afaSkillFile"
   },
+  "AFA Slot for Intent with CustomSlots": {
+    "prefix": "afaCLI_SF_04_SlotForIntentsWithCustomSlots",
+    "body": [
+      "{",
+      "\t\"name\": \"${1:SLOT_NAME}\",",
+      "\t\"type\": \"${2|EIGENE BEZEICHNUNG (DANN MIT VALUES) oder AMAZON.BUILD-IN ('VALUES' BITTE LÖSCHEN),AMAZON.NUMBER,AMAZON.DATE,AMAZON.TIME,AMAZON.DE_FIRST_NAME,AMAZON.DE_CITY,AMAZON.DE_REGION,AMAZON.EUROPE_CITY|}\",",
+      "\t\"values\": [",
+      "\t\t{",
+      "\t\t\t\"value\": \"${3:WERT DER INNERHALB DES SLOTS ERKANNT WERDEN SOLL}\",",
+      "\t\t\t\"synonyms\": [",
+      "\t\t\t\t\"LISTE\",",
+      "\t\t\t\t\"VON SYNOMYMEN\",",
+      "\t\t\t\t\"FÜR DEN WERT\"",
+      "\t\t\t]",
+      "\t\t}$0",
+      "\t],",
+      "\t\"questions\": [",
+      "\t\t\"FRAGE DIE ALEXA STELLT UM DEN SLOT ZU FÜLLEN\"",
+      "\t],",
+      "\t\"error\": [",
+      "\t\t\"RÜCKFRAGE WENN UNGÜLTIGER WERT / SYNONYM VOM NUTZER VERWENDET WIRD\",",
+      "\t\t\"MIT {0} KANN ALEXA DEN FALSCHEN WERT AN DEN NUTZER ZURÜCK SPRECHEN\"",
+      "\t],",
+      "\t\"help\": [",
+      "\t\t\"INFORMATION WENN DER NUTER BEIM SLOT UM HILFE BITTET\"",
+      "\t]",
+      "}$0"
+    ],
+    "description": "Creates an Custom Slot for afaSkillFile"
+  },
   "AFA Value for Intent with CustomSlot": {
-    "prefix": "afaCLI_SF_03_ValueForIntentWithCustomSlot",
+    "prefix": "afaCLI_SF_05_ValueForIntentWithCustomSlot",
     "body": [
       "{",
       "\t\"value\": \"${1:WERT DER INNERHALB DES SLOTS ERKANNT WERDEN SOLL}\",",
