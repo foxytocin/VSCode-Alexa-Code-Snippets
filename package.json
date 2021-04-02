@@ -8,10 +8,16 @@
         "vscode": "^1.36.0"
     },
     "author": "Andreas Fuchs",
+    "license": "GPLv3",
+    "bugs": {
+        "url": "https://github.com/foxytocin/VSCode-Alexa-Code-Snippets/issues",
+        "email": "info@anfuchs.de"
+    },
     "homepage": "https://anfuchs.de",
     "categories": [
         "Other",
-        "Snippets"
+        "Snippets",
+        "Programming Languages"
     ],
     "repository": {
         "type": "git",
@@ -24,6 +30,7 @@
     },
     "keywords": [
         "Alexa",
+        "Alexa Skill",
         "Alexa Snippets",
         "Alexa Interaction Model",
         "Alexa Lambda Handler",
@@ -34,7 +41,8 @@
         "Mocha Snippets",
         "AFA-CLI",
         "AFA-Tool-Set",
-        "AFA"
+        "AFA",
+        "JSON"
     ],
     "contributes": {
         "snippets": [
