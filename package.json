@@ -2,7 +2,7 @@
     "name": "alexa-code-snippets",
     "displayName": "Alexa Code Snippets",
     "description": "Snippets for Interaction Model, Lambda Handler and Helper Functions",
-    "version": "1.0.7",
+    "version": "1.0.8",
     "publisher": "anfuchs",
     "engines": {
         "vscode": "^1.36.0"
@@ -15,7 +15,7 @@
     ],
     "repository": {
         "type": "git",
-        "url": "https://gitea.anfuchs.de/anfuchs/alexa-code-snippets.git"
+        "url": "https://github.com/foxytocin/VSCode-Alexa-Code-Snippets.git"
     },
     "icon": "images/anfuchs_icon.png",
     "galleryBanner": {

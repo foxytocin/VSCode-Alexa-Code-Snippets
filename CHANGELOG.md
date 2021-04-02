@@ -1,4 +1,7 @@
 ## Mar 02, 2021
+v1.0.8
+- changes repository url from gitea to github
+
 v1.0.7
 - adds segment for small and large icon uris
 - adds *.md to .prettierignore
