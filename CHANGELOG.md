@@ -1,3 +1,8 @@
+## Mar 02, 2021
+v1.0.7
+- adds segment for small and large icon uris
+- adds *.md to .prettierignore
+
 ## Jul 13, 2020
 v1.0.6
 - adds Slots for Intent with CustomSlots

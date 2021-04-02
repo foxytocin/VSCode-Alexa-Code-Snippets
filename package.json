@@ -1,72 +1,72 @@
 {
-	"name": "alexa-code-snippets",
-	"displayName": "Alexa Code Snippets",
-	"description": "Snippets for Interaction Model, Lambda Handler and Helper Functions",
-	"version": "1.0.6",
-	"publisher": "anfuchs",
-	"engines": {
-		"vscode": "^1.36.0"
-	},
-	"author": "Andreas Fuchs",
-	"homepage": "https://anfuchs.de",
-	"categories": [
-		"Other",
-		"Snippets"
-	],
-	"repository": {
-		"type": "git",
-		"url": "https://gitea.anfuchs.de/anfuchs/alexa-code-snippets.git"
-	},
-	"icon": "images/anfuchs_icon.png",
-	"galleryBanner": {
-		"color": "#232F3E",
-		"theme": "dark"
-	},
-	"keywords": [
-		"Alexa",
-		"Alexa Snippets",
-		"Alexa Interaction Model",
-		"Alexa Lambda Handler",
-		"Alexa Helper Functions",
-		"Alexa Response Builder",
-		"Alexa APL",
-		"Alexa Presentation Language",
-		"Mocha Snippets",
-		"AFA-CLI",
-		"AFA-Tool-Set",
-		"AFA"
-	],
-	"contributes": {
-		"snippets": [
-			{
-				"language": "javascript",
-				"path": "./snippets/lambda.json"
-			},
-			{
-				"language": "json",
-				"path": "./snippets/afafile.json"
-			},
-			{
-				"language": "javascript",
-				"path": "./snippets/functions.json"
-			},
-			{
-				"language": "javascript",
-				"path": "./snippets/aplcode.json"
-			},
-			{
-				"language": "javascript",
-				"path": "./snippets/aplcommands.json"
-			},
-			{
-				"language": "javascript",
-				"path": "./snippets/mocha.json"
-			}
-		]
-	},
-	"__metadata": {
-		"id": "c2f88fc3-53cd-4ad1-9fb7-e6fff85054ec",
-		"publisherDisplayName": "Andreas Fuchs",
-		"publisherId": "4e2ef979-6017-40b2-8c16-41556d45348b"
-	}
+    "name": "alexa-code-snippets",
+    "displayName": "Alexa Code Snippets",
+    "description": "Snippets for Interaction Model, Lambda Handler and Helper Functions",
+    "version": "1.0.7",
+    "publisher": "anfuchs",
+    "engines": {
+        "vscode": "^1.36.0"
+    },
+    "author": "Andreas Fuchs",
+    "homepage": "https://anfuchs.de",
+    "categories": [
+        "Other",
+        "Snippets"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://gitea.anfuchs.de/anfuchs/alexa-code-snippets.git"
+    },
+    "icon": "images/anfuchs_icon.png",
+    "galleryBanner": {
+        "color": "#232F3E",
+        "theme": "dark"
+    },
+    "keywords": [
+        "Alexa",
+        "Alexa Snippets",
+        "Alexa Interaction Model",
+        "Alexa Lambda Handler",
+        "Alexa Helper Functions",
+        "Alexa Response Builder",
+        "Alexa APL",
+        "Alexa Presentation Language",
+        "Mocha Snippets",
+        "AFA-CLI",
+        "AFA-Tool-Set",
+        "AFA"
+    ],
+    "contributes": {
+        "snippets": [
+            {
+                "language": "javascript",
+                "path": "./snippets/lambda.json"
+            },
+            {
+                "language": "json",
+                "path": "./snippets/afafile.json"
+            },
+            {
+                "language": "javascript",
+                "path": "./snippets/functions.json"
+            },
+            {
+                "language": "javascript",
+                "path": "./snippets/aplcode.json"
+            },
+            {
+                "language": "javascript",
+                "path": "./snippets/aplcommands.json"
+            },
+            {
+                "language": "javascript",
+                "path": "./snippets/mocha.json"
+            }
+        ]
+    },
+    "__metadata": {
+        "id": "c2f88fc3-53cd-4ad1-9fb7-e6fff85054ec",
+        "publisherDisplayName": "Andreas Fuchs",
+        "publisherId": "4e2ef979-6017-40b2-8c16-41556d45348b"
+    }
 }
