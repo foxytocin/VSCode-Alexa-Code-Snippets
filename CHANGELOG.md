@@ -1,3 +1,7 @@
+## Mar 08, 2021
+v1.0.9
+- simplified syntax for canResume attribute
+
 ## Mar 02, 2021
 v1.0.8
 - changes repository url from gitea to github

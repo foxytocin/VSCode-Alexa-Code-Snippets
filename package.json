@@ -2,7 +2,7 @@
     "name": "alexa-code-snippets",
     "displayName": "Alexa Code Snippets",
     "description": "Snippets for Interaction Model, Lambda Handler and Helper Functions",
-    "version": "1.0.8",
+    "version": "1.0.9",
     "publisher": "anfuchs",
     "engines": {
         "vscode": "^1.36.0"
