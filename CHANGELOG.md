@@ -1,3 +1,8 @@
+## Apr 17, 2021
+v1.0.10
+- small layout changes on intents with slots snippet layout
+- adds privacyAndCompliance attributes to afafile template
+
 ## Mar 08, 2021
 v1.0.9
 - simplified syntax for canResume attribute
