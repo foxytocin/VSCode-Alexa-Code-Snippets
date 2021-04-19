@@ -1,3 +1,7 @@
+## Apr 19, 2021
+v1.0.12
+- adds sessionShouldEnd attribute switch to afafile template
+
 ## Apr 17, 2021
 v1.0.11
 - adds privacyAndCompliance attributes to afafile template

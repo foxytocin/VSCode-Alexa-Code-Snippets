@@ -70,7 +70,8 @@
       "\t],",
       "\t\"repromtText\": [",
       "\t\t\"${4:TEXT DEN ALEXA NACH 8 SEKUNDEN OHNE REAKTION SPRECHEN SOLL}\"",
-      "\t]",
+      "\t],",
+      "\t\"sessionShouldEnd\": false",
       "},"
     ],
     "description": "Creates an Intent for afaSkillFile"
@@ -92,6 +93,7 @@
       "\t\"canResume\": [",
       "\t\t\t\"FRAGEN DIE ALEXA STELLT WENN ZUM LAUFENDEN INTENT ZURÜCK GEKEHRT WIRD\"",
       "\t],",
+      "\t\"sessionShouldEnd\": false,",
       "\t\"slots\": [",
       "\t\t{",
       "\t\t\t\"name\": \"${3:SLOT_NAME}\",",
